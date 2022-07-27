@@ -248,7 +248,7 @@ button:hover {
   border: solid 1px hsl(0, 0%, 8%);
 }
 
-/* Desabilited for Desktop for while */
+/* Disabled for Desktop for while */
 @media(min-width: 430px) {
   .no_desktop {
     position: absolute;
@@ -259,12 +259,17 @@ button:hover {
     align-items: center;
     justify-content: center;
   }
-
+  
   .no_desktop h1 {
     color: gold;
+    margin: 0 20%;
+  }
+
+  .no_desktop h1 strong:first-child {
+    color: red;
   }
 
   .no_desktop h1 strong {
-    color: red;
+    color: blue;
   }
 }
