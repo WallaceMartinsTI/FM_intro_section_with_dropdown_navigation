@@ -15,7 +15,6 @@
 .prettierignore
 
 # While development is not completed
-./design
 style-guide.md
 README-template.md
 README.md
