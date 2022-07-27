@@ -14,6 +14,19 @@
   font-family: 'Epilogue', sans-serif;
 }
 
+.desktop_nav > div,
+.snap > img, h3 {
+  cursor: pointer;
+}
+
+h3 {
+  color: hsl(0, 0%, 41%);
+}
+
+h3:hover {
+  color: hsl(0, 0%, 8%);
+}
+
 p {
   font-size: 18px;
   text-align: center;
@@ -24,6 +37,10 @@ p {
 }
 
 .hidden {
+  display: none !important;
+}
+
+.dsk_hidden {
   display: none;
 }
 
@@ -92,15 +109,6 @@ body {
   height: 3em;
 }
 
-.main_content button:active,
-.main_content button:focus,
-.main_content button:hover {
-  transition: .5s;
-  color: #000;
-  border: 1px solid #000;
-  background-color: #FFF;
-}
-
 footer {
   height: 100%;
   align-items: center;
@@ -133,7 +141,7 @@ footer {
 
   margin-left: 35%;
   width: 65%;
-  height: 100%;
+  height: 100vh;
 
   box-shadow: -9.5em -0.01em rgba(0, 0, 0, .6);
 
@@ -213,6 +221,7 @@ footer {
 
 .careers, .about {
   margin-top: 1.5em;
+  cursor: pointer;
 }
 
 .dropdown_buttons {
@@ -245,31 +254,180 @@ button {
 button:active,
 button:focus,
 button:hover {
-  border: solid 1px hsl(0, 0%, 8%);
+  transition: .5s;
+  color: #000;
+  border: 1px solid #000;
+  background-color: #FFF;
 }
 
-/* Disabled for Desktop for while */
-@media(min-width: 430px) {
-  .no_desktop {
-    position: absolute;
-    background-color: #000;
-    width: 100%;
-    height: 100%;
-    display: flex;
+@media(min-width: 600px) {
+  footer {
+    margin-top: 2em;
+  }
+
+  .dropdown_menu {
+    box-shadow: -13em -0.01em rgba(0, 0, 0, .6);
+  }
+
+}
+
+@media(min-width: 768px) {
+  .dropdown_menu {
+    box-shadow: -17em -0.01em rgba(0, 0, 0, .6);
+  }
+
+}
+
+@media(min-width: 1024px) {
+
+  body {
+    height: 100vh;
     align-items: center;
-    justify-content: center;
+  }
+
+  header {
+    justify-content: flex-start;
+    height: 5em;
+    width: 100%;
+  }
+
+  .snap {
+    width: 15vw;
+    padding: 2em;
+  }
+
+  header nav img {
+    display: none;
+  }
+
+  .desktop_nav {
+    display: flex;
+    width: 60%;
+    justify-content: flex-start;
+    gap: 1em;
+  }
+
+  .desktop_nav div {
+    padding: 2em;
+    align-items: center;
+  }
+
+  .desktop_nav div img {
+    display: initial;
+    margin-left: 1em;
+  }
+
+  .buttons {
+    width: 25vw;
+    align-items: center;
+    margin-left: 1em;
+  }
+
+  .buttons button {
+    width: 10em;
+    height: 3em;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 3em 1em;
+
+    gap: 5em;
+    height: 500px;
+  }
+
+  .hero_image {
+    margin: 0;
+    height: 100%;
+    width: 40%;
   }
   
-  .no_desktop h1 {
-    color: gold;
-    margin: 0 20%;
+  .hero_image img {
+    height: 100%;
+    width: auto;
   }
 
-  .no_desktop h1 strong:first-child {
-    color: red;
+  .main_content {
+    height: 100%;
+    width: 50%;
+    justify-content: flex-start;
   }
 
-  .no_desktop h1 strong {
-    color: blue;
+  .main_content h1 {
+    font-size: 52px;
+    text-align: left;
+    padding-bottom: 1em;
+    padding-left: 0;
+  }
+
+  .main_content p {
+    text-align: left;
+    margin: 0;
+  }
+
+  .main_content .learn_more {
+    align-self: baseline;
+    margin-left: 0;
+    margin-top: 2em;
+  }
+
+  .clients {
+    margin-top: 15%;
+  }
+
+  .desktop_features_dropdown,
+  .desktop_company_dropdown {
+    position: absolute;
+    background-color: #FFF;
+    padding: 0 !important;
+    margin-top: 4.5em;
+    border-radius: 1.5em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .2);
+  }
+
+  .desktop_features_dropdown {
+    left: 7em;
+    width: 11.5em;
+  }
+
+  .dsk_item {
+    display: flex;
+    width: 100%;
+    padding: 1em !important;
+  }
+
+  .dsk_item h3 {
+    margin-left: 1em;
+  }
+
+  .desktop_company_dropdown {
+    left: 21em;
+    width: 10em;
+  }
+
+}
+
+@media(min-width: 1440px) {  
+  .desktop_features_dropdown {
+    left: 9.2em;
+    width: 13em;
+  }
+
+  .desktop_company_dropdown {
+    left: 24.5em;
+    width: 10em;
+  }
+}
+
+@media(min-width: 1620px) {  
+  .desktop_features_dropdown {
+    left: 14em;
+    width: 13em;
+  }
+
+  .desktop_company_dropdown {
+    left: 29.2em;
+    width: 10em;
   }
 }

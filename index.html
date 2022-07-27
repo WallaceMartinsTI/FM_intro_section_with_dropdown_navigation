@@ -9,20 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
-  
+  <script src="script.js" defer></script>
 </head>
 <body id="body" class="flex">
 
-  <!-- Disabled for Desktop for while -->
-  <div class="no_desktop">
-    <h1>
-      DISABLED FOR DESKTOP <strong>TRY AGAIN LATER,</strong>
-      OR TRY IN YOUR <strong>SMARTPHONE</strong>, THANKS FOR YOU VISIT!
-    </h1>
-    
-  </div>
-  <!--  -->
-  <div class="hidden">
   <div id="dropdown" class="dropdown_menu hidden flex">
     <div class="dropdown_header flex">
       <img onclick="closeMenu()" src="images/icon-close-menu.svg" alt="close menu image">
@@ -68,7 +58,7 @@
           <img id="arrow_up_company" onclick="closeCompany()" class="hidden" src="images/icon-arrow-up.svg" alt="arrow up image">
         </div>
 
-        <div id="company_items" class="company_items">
+        <div id="company_items" class="company_items hidden">
           <div class="history">
             <h3>History</h3>
           </div>
@@ -105,6 +95,71 @@
     <div class="snap">
       <img src="images/logo.svg" alt="logo image">
     </div>
+
+    <nav class="desktop_nav desktop">
+      <div class="flex">
+        <h3>Features</h3>
+        <img id="dsk_arrow_down_features" onclick="openDesktopFeatures()" src="images/icon-arrow-down.svg" alt="arrow down icon">
+        <img id="dsk_arrow_up_features" onclick="closeDesktopFeatures()" class="hidden" src="images/icon-arrow-up.svg" alt="arrow up icon">
+      </div>
+      
+      <div id="desktop_features_dropdown" class="desktop_features_dropdown hidden">
+
+        <div class="todo dsk_item">
+          <img src="images/icon-todo.svg" alt="todo icon">
+          <h3>Todo List</h3>
+        </div>
+
+        <div class="dsk_item">
+          <img src="images/icon-calendar.svg" alt="calendar icon">
+          <h3>Calendar</h3>
+        </div>
+
+        <div class="dsk_item">
+          <img src="images/icon-reminders.svg" alt="reminders icon">
+          <h3>Reminders</h3>
+        </div>
+
+        <div class="dsk_item">
+          <img src="images/icon-planning.svg" alt="planning icon">
+          <h3>Planning</h3>
+        </div>
+
+      </div>
+
+      <div class="flex">
+        <h3>Company</h3>
+        <img id="dsk_arrow_down_company" onclick="openDesktopCompany()" src="images/icon-arrow-down.svg" alt="arrow up image">
+        <img id="dsk_arrow_up_company" onclick="closeDesktopCompany()" class="hidden" src="images/icon-arrow-up.svg" alt="arrow up icon">
+      </div>
+
+      <div id="desktop_company_dropdown" class="desktop_company_dropdown hidden">
+        <div class="todo dsk_item">
+          <h3>History</h3>
+        </div>
+
+        <div class="dsk_item">
+          <h3>Our Team</h3>
+        </div>
+
+        <div class="dsk_item">
+          <h3>Blog</h3>
+        </div>
+      </div>
+
+      <div>
+        <h3>Careers</h3>
+      </div>
+      <div>
+        <h3>About</h3>
+      </div>
+    </nav>
+
+    <div class="buttons desktop flex">
+      <button>Login</button>
+      <button>Register</button>
+    </div>
+
     <nav class="navbar">
       <img onclick="openMenu()" src="images/icon-menu.svg" alt="menu image">
     </nav>
@@ -112,20 +167,37 @@
 
   <main>
     <div role="img" class="hero_image">
-      <img src="images/image-hero-mobile.png" alt="hero mobile image">
+      <img class="mobile" src="images/image-hero-mobile.png" alt="hero image mobile">
+      <img class="desktop" src="images/image-hero-desktop.png" alt="hero image desktop">
     </div>
+
     <div role="main" class="main_content flex">
-      <h1>Make remote work</h1>
+      <h1>Make <br> remote work</h1>
       <p>
         Get your team in sync, no matter your location,
         Streamline processes, create team rituals, and
         watch productivity soar.
       </p>
-      <button>Learn more</button>
+      <button class="learn_more">Learn more</button>
+    
+      <div class="clients desktop flex">
+        <div class="databiz">
+          <img src="images/client-databiz.svg" alt="databiz client image">
+        </div>
+        <div class="audiophile">
+          <img src="images/client-audiophile.svg" alt="audiophile client image">
+        </div>
+        <div class="meet">
+          <img src="images/client-meet.svg" alt="meet client image">
+        </div>
+        <div class="maker">
+          <img src="images/client-maker.svg" alt="maker client image">
+        </div>
+      </div>
     </div>
   </main>
 
-  <footer class="flex">
+  <footer class="mobile flex">
     <div class="clients flex">
       <div class="databiz">
         <img src="images/client-databiz.svg" alt="databiz client image">
@@ -141,7 +213,7 @@
       </div>
     </div>
   </footer>
-</div>
-<script src="script.js"></script>
+
+
 </body>
 </html>

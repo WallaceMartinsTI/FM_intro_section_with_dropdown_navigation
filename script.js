@@ -41,3 +41,55 @@ function closeCompany(){
   arrowDownCompany.classList.remove("hidden")
   arrowUpCompany.classList.add("hidden")
 }
+
+/* Get Screen Size */
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+
+let desktopItems = document.querySelectorAll(".desktop")
+let mobileItems = document.querySelectorAll(".mobile")
+
+if (windowWidth < 1024) {
+  desktopItems.forEach(item => {
+    item.classList.add("hidden")
+  })
+} else {
+  mobileItems.forEach(item => {
+    item.classList.add("hidden")
+  })
+}
+
+/* Desktop Version */
+
+let dsk_feature_items = document.getElementById("desktop_features_dropdown")
+let dsk_company_items = document.getElementById("desktop_company_dropdown")
+let dsk_arrowDownFeatures = document.getElementById("dsk_arrow_down_features")
+let dsk_arrowUpFeatures = document.getElementById("dsk_arrow_up_features")
+let dsk_arrowDownCompany = document.getElementById("dsk_arrow_down_company")
+let dsk_arrowUpCompany = document.getElementById("dsk_arrow_up_company")
+
+function openDesktopFeatures(){
+  dsk_feature_items.classList.remove("hidden")
+  dsk_arrowDownFeatures.classList.add("hidden")
+  dsk_arrowUpFeatures.classList.remove("hidden")
+
+}
+
+function closeDesktopFeatures(){
+  dsk_feature_items.classList.add("hidden")
+  dsk_arrowDownFeatures.classList.remove("hidden")
+  dsk_arrowUpFeatures.classList.add("hidden")
+}
+
+function openDesktopCompany(){
+  dsk_company_items.classList.remove("hidden")
+  dsk_arrowDownCompany.classList.add("hidden")
+  dsk_arrowUpCompany.classList.remove("hidden")
+
+}
+
+function closeDesktopCompany(){
+  dsk_company_items.classList.add("hidden")
+  dsk_arrowDownCompany.classList.remove("hidden")
+  dsk_arrowUpCompany.classList.add("hidden")
+}
